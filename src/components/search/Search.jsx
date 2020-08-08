@@ -7,12 +7,13 @@ class Search extends Component {
   };
 
   handleChangeText = (e) => {
-    this.setState({ [e.target.name]: e.target.value.trim() });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if (!this.state.text) {
+    const trimText = this.state.text.trim();
+    if (!trimText) {
       this.props.setAlert('Please enter text', 'danger');
     } else {
       this.props.searchUser(this.state.text);
