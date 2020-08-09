@@ -52,7 +52,7 @@ class Search extends Component {
             className='btn btn-light btn-block'
             onClick={this.handleClearBtn}
           >
-            Clear
+            Clear Search
           </button>
         )}
       </div>
